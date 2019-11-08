@@ -1,14 +1,14 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import initState from './productdata'
+import React from 'react';
+import { connect } from 'react-redux';
+import initState from './productdata';
 import './Listitems.css';
-import { addProductAction, removeProductAction, updateProductCountAction } from './store/action/Actioncreater'
-export class Cart extends React.Component {
+import { addProductAction, removeProductAction, updateProductCountAction } from './store/action/Actioncreater';
 
+export class Cart extends React.Component {
   constructor(props) {
     super(props)
     this.state = ({
-      count: 0
+      count: 0,
     })
   }
 
@@ -20,7 +20,7 @@ export class Cart extends React.Component {
 
   removeProduct = (id) => {
     if (this.state.count === 0) {
-      alert("can't be less than 0")
+      alert("can't be less than 0");
       return;
     }
     let productObject = initState.products.find(product => product.productId === id);
@@ -62,8 +62,7 @@ export class Cart extends React.Component {
         </table>
         <h4>{this.state.count} products adding to the cart</h4>
       </div>
-
-    );
+    )
   }
 }
 
