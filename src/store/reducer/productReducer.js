@@ -1,4 +1,4 @@
-import initState from '/home/webonise/reactassignment/shoppingcart/src/productdata.js'
+import initState from '../../productdata.js'
 const productReducer = (state = initState, action) => {
 
     switch (action.type) {
